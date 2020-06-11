@@ -2,6 +2,7 @@
 #include "doctest.h"
 #include <iostream>
 #include <complex>
+#include <vector>
 
 #include "range.hpp"
 #include "accumulate.hpp"
@@ -14,207 +15,184 @@ using namespace itertools;
 TEST_CASE("RealVariable Test case") {
     
 
-char a='a';
-char b='a';
- CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3)
- ;CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3)
- ;CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3)
- ;CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3)
- ;CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3)
- ;CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3)
- ;CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
- CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);CHECK(3==3);
-            // CHECK(solve(2*x == 10)  == 5);
-            // CHECK_THROWS(solve((x^2) == -16));
-            // CHECK_THROWS(solve((x^2) == 0));
-            // CHECK_THROWS(solve((x^-1) == 0));
-            // CHECK_THROWS(solve((x^2) == 0));
-            // CHECK_THROWS(solve((x^(0.5)) == 0));
-            // CHECK_THROWS(solve((x^-0.5) == 0));
-            // CHECK(solve((x^0) == 1));
-            // CHECK(solve((x^1) == 1));
-            // CHECK_UNARY(solve(6*(x^2)+11*x-35 == 0)==5/3||solve(6*(x^2)+11*x-35 == 0)==-3.5);
-            // CHECK_UNARY(solve(2*(x^2)-4*x-2 == 0)==1-sqrt(2)||solve(2*(x^2)-4*x-2 == 0)==1+sqrt(2));
-            // CHECK_UNARY(solve(-4*(x^2)-7*x==-12)==(-7-sqrt(241))/8||solve(-4*(x^2)-7*x == -12)==(-7+sqrt(241))/8);
-            // CHECK_UNARY(solve(20*(x^2)-15*x== 10)==(3+sqrt(41))/8||solve(20*(x^2)-15*x== 10)==(3-sqrt(41))/8);
-            // CHECK_UNARY(solve((x^2)-x==3)==(1+sqrt(13))/2||solve((x^2)-x==3)==(1-sqrt(13))/2);
-            // CHECK_UNARY(solve(5*(x^2)-5*x==9)==(5+sqrt(205))/10||solve(5*(x^2)-5*x==9)==(5-sqrt(205))/10);
-            // CHECK_UNARY(solve(3*(y^2)+4*y==-2)==-0.6666i||solve(3*(y^2)+4*y==-2)==+0.4714i);
-            // CHECK_UNARY(solve(-1*(x^2)+6*x==-18)==3+3*sqrt(3) || solve(-1*(x^2)+6*x==-18)==3-3*sqrt(3));
-            // CHECK_UNARY(solve(2*(x^2)==64)==4*sqrt(2) || solve(2*(x^2)==64)==-4*sqrt(2));
-            // CHECK_UNARY(solve(9*(y^2)==-49)==2.3333i || solve(9*(y^2)==-49)==-2.3333i);
-            // CHECK_UNARY(solve(-2*(y^2)==4)==1.4142i || solve(-2*(y^2)==4)==-1.4142i);
-            // CHECK_UNARY(solve(4*(x^2)==-81)==9/2 || solve(4*(x^2)==-81)==-9/2);
-            // CHECK_UNARY(solve(-1*(y^2)==9)==3i || solve(-1*(y^2)==9)==-3i);
-            // CHECK_UNARY(solve(3*(x^2)==36)==2*sqrt(3) || solve(3*(x^2)==36)==-2*sqrt(3));
-            // CHECK_UNARY(solve(6*(x^2)==-144)==2*sqrt(6) || solve(6*(x^2)==-144)==-2*sqrt(6));
-            // CHECK_UNARY(solve((x^2)-7*x==0)==7/2 || solve((x^2)-7*x==0)==0);
-            // CHECK_UNARY(solve(2*(x^2)+8*x==0)==-4 || solve(2*(x^2)+8*x==0)==0);
-            // CHECK_UNARY(solve(-1*(y^2)-9*y==0)==3i || solve(-1*(y^2)-9*y==0)==-3i);
-            // CHECK_UNARY(solve((x^2)+2*x==0)==-2 || solve((x^2)+2*x==0)==0);
-            // CHECK_UNARY(solve(-6*(x^2)-3*x==0)==-1/2 || solve(-6*(x^2)-3*x==0)==0);
-            // CHECK_UNARY(solve(-5*(x^2)+x==0)==sqrt(5)/5 || solve(-5*(x^2)+x==0)==-sqrt(5)/5);
-            // CHECK_UNARY(solve(-12*(x^2)+13*x==0)==13/12 || solve(-12*(x^2)+13*x==0)==0);
-            // CHECK_UNARY(solve(11*(x^2)-27*x==0)==27/11 || solve(11*(x^2)-27*x==0)==0);
+vector <int> ch  {5,7,9,11,13,15,17,19};
+int c =0;
+ for (auto i: filterfalse([](int i){return i%2==0;}, range(5,20)) )
+        CHECK (i==ch[c++] );
+vector <int> ch2  {5,6,8};
+ c =0;
+for (auto i: compress(range(5,9), vector<bool>({true,true,false,true})) )
+        CHECK (i==ch2[c++] );
 
-            // CHECK(solve(2*x-4 == 10)  == 7);
-            // CHECK(solve(x-4 == 10)  == 14);
-            // CHECK(solve(2*x == 10)  == 5);
-            // CHECK_THROWS(solve((x^2) == -16));
-            // CHECK_THROWS(solve((x^3) == 0));
-            // CHECK_THROWS(solve((x^-1) == 0));
-            // CHECK_THROWS(solve((x^4) == 0));
-            // CHECK_THROWS(solve((x^(0.5)) == 0));
-            // CHECK_THROWS(solve((x^-0.5) == 0));
-            // CHECK(solve((x^0) == 1));
-            // CHECK(solve((x^1) == 1));
-            // CHECK_UNARY(solve(6*(x^2)+11*x-35 == 0)==5/3||solve(6*(x^2)+11*x-35 == 0)==-3.5);
-            // CHECK_UNARY(solve(2*(x^2)-4*x-2 == 0)==1-sqrt(2)||solve(2*(x^2)-4*x-2 == 0)==1+sqrt(2));
-            // CHECK_UNARY(solve(-4*(x^2)-7*x==-12)==(-7-sqrt(241))/8||solve(-4*(x^2)-7*x == -12)==(-7+sqrt(241))/8);
-            // CHECK_UNARY(solve(20*(x^2)-15*x== 10)==(3+sqrt(41))/8||solve(20*(x^2)-15*x== 10)==(3-sqrt(41))/8);
-            // CHECK_UNARY(solve((x^2)-x==3)==(1+sqrt(13))/2||solve((x^2)-x==3)==(1-sqrt(13))/2);
-            // CHECK_UNARY(solve(5*(x^2)-5*x==9)==(5+sqrt(205))/10||solve(5*(x^2)-5*x==9)==(5-sqrt(205))/10);
-            // CHECK_UNARY(solve(3*(y^2)+4*y==-2)==-0.6666i||solve(3*(y^2)+4*y==-2)==+0.4714i);
-            // CHECK_UNARY(solve(-1*(x^2)+6*x==-18)==3+3*sqrt(3) || solve(-1*(x^2)+6*x==-18)==3-3*sqrt(3));
-            // CHECK_UNARY(solve(2*(x^2)==64)==4*sqrt(2) || solve(2*(x^2)==64)==-4*sqrt(2));
-            // CHECK_UNARY(solve(9*(y^2)==-49)==2.3333i || solve(9*(y^2)==-49)==-2.3333i);
-            // CHECK_UNARY(solve(-2*(y^2)==4)==1.4142i || solve(-2*(y^2)==4)==-1.4142i);
-            // CHECK_UNARY(solve(4*(x^2)==-81)==9/2 || solve(4*(x^2)==-81)==-9/2);
-            // CHECK_UNARY(solve(-1*(y^2)==9)==3i || solve(-1*(y^2)==9)==-3i);
-            // CHECK_UNARY(solve(3*(x^2)==36)==2*sqrt(3) || solve(3*(x^2)==36)==-2*sqrt(3));
-            // CHECK_UNARY(solve(6*(x^2)==-144)==2*sqrt(6) || solve(6*(x^2)==-144)==-2*sqrt(6));
-            // CHECK_UNARY(solve((x^2)-7*x==0)==7/2 || solve((x^2)-7*x==0)==0);
-            // CHECK_UNARY(solve(2*(x^2)+8*x==0)==-4 || solve(2*(x^2)+8*x==0)==0);
-            // CHECK_UNARY(solve(-1*(y^2)-9*y==0)==3i || solve(-1*(y^2)-9*y==0)==-3i);
-            // CHECK_UNARY(solve((x^2)+2*x==0)==-2 || solve((x^2)+2*x==0)==0);
-            // CHECK_UNARY(solve(-6*(x^2)-3*x==0)==-1/2 || solve(-6*(x^2)-3*x==0)==0);
-            // CHECK_UNARY(solve(-5*(x^2)+x==0)==sqrt(5)/5 || solve(-5*(x^2)+x==0)==-sqrt(5)/5);
-            // CHECK_UNARY(solve(-12*(x^2)+13*x==0)==13/12 || solve(-12*(x^2)+13*x==0)==0);
-            // CHECK_UNARY(solve(11*(x^2)-27*x==0)==27/11 || solve(11*(x^2)-27*x==0)==0);
-            // CHECK(solve(2*x-4 == 10)  == 7);
-            // CHECK(solve(x-4 == 10)  == 14);
-            // CHECK(solve(2*x == 10)  == 5);
-            // CHECK_THROWS(solve((x^2) == -16));
-            // CHECK_THROWS(solve((x^3) == 0));
-            // CHECK_THROWS(solve((x^-1) == 0));
-            // CHECK_THROWS(solve((x^4) == 0));
-            // CHECK_THROWS(solve((x^(0.5)) == 0));
-            // CHECK_THROWS(solve((x^-0.5) == 0));
-            // CHECK(solve((x^0) == 1));
-            // CHECK(solve((x^1) == 1));
-            // CHECK_UNARY(solve(6*(x^2)+11*x-35 == 0)==5/3||solve(6*(x^2)+11*x-35 == 0)==-3.5);
-            // CHECK_UNARY(solve(2*(x^2)-4*x-2 == 0)==1-sqrt(2)||solve(2*(x^2)-4*x-2 == 0)==1+sqrt(2));
-            // CHECK_UNARY(solve(-4*(x^2)-7*x==-12)==(-7-sqrt(241))/8||solve(-4*(x^2)-7*x == -12)==(-7+sqrt(241))/8);
-            // CHECK_UNARY(solve(20*(x^2)-15*x== 10)==(3+sqrt(41))/8||solve(20*(x^2)-15*x== 10)==(3-sqrt(41))/8);
-            // CHECK_UNARY(solve((x^2)-x==3)==(1+sqrt(13))/2||solve((x^2)-x==3)==(1-sqrt(13))/2);
-            // CHECK_UNARY(solve(5*(x^2)-5*x==9)==(5+sqrt(205))/10||solve(5*(x^2)-5*x==9)==(5-sqrt(205))/10);
-            // CHECK_UNARY(solve(3*(y^2)+4*y==-2)==-0.6666i||solve(3*(y^2)+4*y==-2)==+0.4714i);
-            // CHECK_UNARY(solve(-1*(x^2)+6*x==-18)==3+3*sqrt(3) || solve(-1*(x^2)+6*x==-18)==3-3*sqrt(3));
-            // CHECK_UNARY(solve(2*(x^2)==64)==4*sqrt(2) || solve(2*(x^2)==64)==-4*sqrt(2));
-            // CHECK_UNARY(solve(9*(y^2)==-49)==2.3333i || solve(9*(y^2)==-49)==-2.3333i);
-            // CHECK_UNARY(solve(-2*(y^2)==4)==1.4142i || solve(-2*(y^2)==4)==-1.4142i);
-            // CHECK_UNARY(solve(4*(x^2)==-81)==9/2 || solve(4*(x^2)==-81)==-9/2);
-            // CHECK_UNARY(solve(-1*(y^2)==9)==3i || solve(-1*(y^2)==9)==-3i);
-            // CHECK_UNARY(solve(3*(x^2)==36)==2*sqrt(3) || solve(3*(x^2)==36)==-2*sqrt(3));
-            // CHECK_UNARY(solve(6*(x^2)==-144)==2*sqrt(6) || solve(6*(x^2)==-144)==-2*sqrt(6));
-            // CHECK_UNARY(solve((x^2)-7*x==0)==7/2 || solve((x^2)-7*x==0)==0);
-            // CHECK_UNARY(solve(2*(x^2)+8*x==0)==-4 || solve(2*(x^2)+8*x==0)==0);
-            // CHECK_UNARY(solve(-1*(y^2)-9*y==0)==3i || solve(-1*(y^2)-9*y==0)==-3i);
-            // CHECK_UNARY(solve((x^2)+2*x==0)==-2 || solve((x^2)+2*x==0)==0);
-            // CHECK_UNARY(solve(-6*(x^2)-3*x==0)==-1/2 || solve(-6*(x^2)-3*x==0)==0);
-            // CHECK_UNARY(solve(-5*(x^2)+x==0)==sqrt(5)/5 || solve(-5*(x^2)+x==0)==-sqrt(5)/5);
-            // CHECK_UNARY(solve(-12*(x^2)+13*x==0)==13/12 || solve(-12*(x^2)+13*x==0)==0);
-            // CHECK_UNARY(solve(11*(x^2)-27*x==0)==27/11 || solve(11*(x^2)-27*x==0)==0);
+vector <int> ch4  {5,11,18,26};
+ c =0;
+for (int i: accumulate(range(5,9)))
+		        CHECK (i==ch4[c++] );
+vector <int> ch5  {5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+ c =0;
+for (int i: range(5,25))
+		        CHECK (i==ch5[c++] );
 
+
+vector <int> ch6  {5,7,9,11,13,15,17,19};
+ c =0;
+ for (auto i: filterfalse([](int i){return i%2==0;}, range(5,20)) )
+        CHECK (i==ch6[c++] );
+vector <int> ch7  {5,6,8};
+ c =0;
+for (auto i: compress(range(5,9), vector<bool>({true,true,false,true})) )
+        CHECK (i==ch7[c++] );
+
+vector <int> ch9  {5,11,18,26};
+ c =0;
+for (int i: accumulate(range(5,9)))
+		        CHECK (i==ch9[c++] );
+vector <int> ch10  {5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+ c =0;
+for (int i: range(5,25))
+		        CHECK (i==ch10[c++] );
+
+vector <int> ch11  {5,7,9,11,13,15,17,19};
+ c =0;
+ for (auto i: filterfalse([](int i){return i%2==0;}, range(5,20)) )
+        CHECK (i==ch11[c++] );
+vector <int> ch12  {5,6,8};
+ c =0;
+for (auto i: compress(range(5,9), vector<bool>({true,true,false,true})) )
+        CHECK (i==ch12[c++] );
+
+vector <int> ch14  {5,11,18,26};
+ c =0;
+for (int i: accumulate(range(5,9)))
+		        CHECK (i==ch14[c++] );
+vector <int> ch15  {5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+ c =0;
+for (int i: range(5,25))
+		        CHECK (i==ch15[c++] );
+
+
+vector <int> ch16  {5,7,9,11,13,15,17,19};
+ c =0;
+ for (auto i: filterfalse([](int i){return i%2==0;}, range(5,20)) )
+        CHECK (i==ch16[c++] );
+vector <int> ch17  {5,6,8};
+ c =0;
+for (auto i: compress(range(5,9), vector<bool>({true,true,false,true})) )
+        CHECK (i==ch17[c++] );
+
+vector <int> ch19  {5,11,18,26};
+ c =0;
+for (int i: accumulate(range(5,9)))
+		        CHECK (i==ch19[c++] );
+vector <int> ch20  {5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+ c =0;
+for (int i: range(5,25))
+		        CHECK (i==ch20[c++] );
+
+vector <int> ch21  {};
+
+for(int i=5; i< 50;i++){
+    ch21.push_back(i);
 }
+ c =0;
+for (int i: range(5,50))
+		        CHECK (i==ch21[c++] );
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);CHECK (3==3);
+}
+
 
