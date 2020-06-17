@@ -13,7 +13,7 @@ namespace itertools{
         T  c;
         using v1= decltype(c.begin());
         using v2= decltype(*(c.begin()));
-        v2 (*func) (v2 a, v2 b) ;
+        v2 (*fun2) (v2 a, v2 b) ;
         int flag;
 
 
@@ -31,8 +31,7 @@ namespace itertools{
 
             }  
 
-            iterator(v1 it,v2 (*f) (v2 a, v2 b),int fl):ptr(it),acum(*ptr),flag(fl){
-                Fun=f;
+            iterator(v1 it,v2 (*f) (v2 a, v2 b),int fl):ptr(it),acum(*ptr),flag(fl),Fun(f){
 
             } 
         
@@ -41,25 +40,23 @@ namespace itertools{
                 return ptr!=a.ptr;
             }
             auto operator++(){
+                 ++ptr;
                 if(flag==1){
-                    ++ptr;
+                   
                 acum+=*ptr;
                 }
                 if(flag==2){
-                    ++ptr;
+
                     acum= Fun(acum,*ptr);
                 }
                 return ptr;
 
-                
             }
             
             v2 operator*(){
                
                 return acum; 
                
-
-
             }
         };
         
@@ -68,14 +65,13 @@ namespace itertools{
         accumulate(T cont):c(cont){
         flag=1;
         }
-        accumulate(T cont, v2 (*f)(v2 a, v2 b)):c(cont){
-        func= f;
+        accumulate(T cont, v2 (*f)(v2 a, v2 b)):c(cont),fun2(f){
 
         flag=2;
         }
         
         auto begin(){
-        iterator it{c.begin(),func,flag};
+        iterator it{c.begin(),fun2,flag};
         return it;
         }
 
