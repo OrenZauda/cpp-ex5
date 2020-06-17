@@ -1,35 +1,56 @@
+
 #pragma once
 namespace itertools{
 
+   template  <typename T, typename T2>
+
     class compress{
+        public:
+        T cont;
+        T2 bools;
+        using v1 = decltype(cont.begin());
+        using v2 = decltype(*cont.begin());
+        using v3 = decltype(bools.begin());
+
         class iterator{
             public:
-            int * ptr;
+            v1 ptr;
+            v3 ind;
+            v1 endd;
+            T2 b;
+            iterator(v1 cn, T2 bls,v1 r,v3 g ): endd(cn),b(bls),ptr(r), ind(g){
+
+            }
+            iterator(v1 s):ptr(s){
+
+            }
             bool operator!=(iterator a){
-                return false;
+                return ptr!=a.ptr;
             }
             iterator operator++(){
-                iterator it = *this;
-                it.ptr++;
-                return it;
+                ++ptr;
+                ++ind;
+                while (!(*ind)&&ptr!=endd){
+                ++ptr;
+                ++ind; 
+                }
+                return *this;
             }
-               int operator*(){
+               v2 operator*(){
                
-                return 3;
+                return *ptr;
             }
         };
-        public:
-        
-        template <typename T> 
-        compress(T container, std::vector <bool> b){};
+
+        compress(T container,T2 b):cont(container),bools(b){};
 
         iterator begin(){
-            iterator it;
+            iterator it{cont.end(),bools,cont.begin(),bools.begin()};
             return it;
         }
         iterator end(){
-        iterator it;
-         return it;
+        iterator it{cont.end()};
+        return it;
         };
 
 

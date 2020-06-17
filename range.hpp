@@ -1,26 +1,27 @@
 #pragma once
+#include <iostream>
 
 
 namespace itertools{
-
+    using namespace std;
     class range{
 
         public:
         
         class iterator{
             public:
-            int * ptr;
-            bool operator!=(iterator a){
-                return false;
+            int ptr;
+            bool operator!=(iterator a)  {
+              //  cout<<"range!="<<endl;
+                return (this->ptr!=a.ptr);
             }
-            iterator operator++(){
-                iterator it = *this;
-                it.ptr++;
-                return it;
+            iterator& operator++(){
+                this->ptr++;
+                return *this;
             }
                int operator*(){
-               
-                return 3;
+                  // cout<<"**range"<<endl;
+                return this->ptr;
             }
         };
 
@@ -36,11 +37,12 @@ namespace itertools{
         };
 
         iterator begin(){
-            it.ptr=&start;
+            it.ptr=start;
+
             return it;
         }
         iterator end(){
-         it.ptr=&last;
+         it.ptr=last;
          return it;
         };
         
